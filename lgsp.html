@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Evaluation</title>
+    <link rel="stylesheet" href="lgspstyle.css">
+</head>
+    
+    <body>
+    
+    <div class="container">
+        
+        <img src="logo.png" alt="plsp" width="250px" height="250px">
+
+        <h1 id="loginHeader">Login </h1>
+        <form id="loginForm" action="mainpage.html" method="POST">
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" href="mainpage.html">Login</button>
+            </div>
+            <div class="form-group switch">
+                <button type="submit" href="#" onclick="toggleForm()">Sign Up</button>
+            </div>
+        </form>
+
+        <form id="signupForm" action="#" method="POST" style="display: none;">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <label for="signupUsername">Username</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+            <div class="form-group switch">
+                <button type="submit" href="#" onclick="toggleForm()">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            var loginForm = document.getElementById("loginForm");
+            var signupForm = document.getElementById("signupForm");
+            var loginHeader = document.getElementById("loginHeader");
+    
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+                loginHeader.classList.remove("hidden");
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+                loginHeader.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+</html>

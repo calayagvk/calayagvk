@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Evaluation Form</title>
+    <link rel="stylesheet" href="fevalform.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Faculty Evaluation Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="faculty_name">Faculty Member Name:</label>
+                <input type="text" id="faculty_name" name="faculty_name" required>
+            </div>
+            <div class="form-group">
+                <label for="teaching_skills">Teaching Skills:</label>
+                <input type="number" id="teaching_skills" name="teaching_skills" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="communication">Communication:</label>
+                <input type="number" id="communication" name="communication" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="responsiveness">Responsiveness:</label>
+                <input type="number" id="responsiveness" name="responsiveness" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="subject_knowledge">Subject Knowledge:</label>
+                <input type="number" id="subject_knowledge" name="subject_knowledge" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="overall_rating">Overall Rating:</label>
+                <input type="number" id="overall_rating" name="overall_rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
